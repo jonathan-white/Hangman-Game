@@ -1,0 +1,124 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #000;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: "Passion One", Arial, sans-serif;
+	text-align: center;
+	word-spacing: .75em;
+	letter-spacing: .125em;
+	font-style: italic;
+	position: relative;
+	
+}
+
+h2 {
+	padding: 20px 20px 0;
+}
+
+.clearfix::before,
+.clearfix::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.clearfix {
+	clear: both;
+}
+.clearfix::after {
+	content: '';
+	clear: both;
+}
+
+header {
+	width: 90%;
+	margin: 50px auto 10px;
+}
+
+section {
+	margin: 0 auto;
+	position: relative;
+	width: 50%;
+	width: 70%;
+	height: 80vh;
+}
+
+#status {
+	position: relative;
+	top: 50%;
+	font-size: 30px;
+}
+
+.img-holder,
+.content-holder {
+	float: left;
+	position: relative;
+	width: 50%;
+	height: 70vh;
+	border: 4px dotted #fff;
+}
+
+.img-holder img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-height: 90%;
+}
+
+.word {
+	height: 4em;
+}
+
+#word-showing {
+	margin: 0 auto;
+	width: fit-content;
+}
+
+#word-showing li {
+	float: left;
+	width: 15px;
+	height: 20px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+#word-showing li:last-child {
+	margin-right: 0;
+}
+
+.output {
+	color: #777;
+}
+
+.modal {
+	display: block;
+	position: absolute;
+	padding: 40px;
+	width: 30%;
+	height: 20vh;
+	color: #000;
+	background-color: #ddd;
+	border: 2px solid #444;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.hide {
+	display: none;
+}
+
+footer {
+	font-family: Roboto, Arial, sans-serif;
+	word-spacing: initial;
+	letter-spacing: initial;
+	font-size: 1em;
+	position: fixed;
+	right: 10px;
+	bottom: 0;
+}
