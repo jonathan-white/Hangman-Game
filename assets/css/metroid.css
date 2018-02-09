@@ -2,6 +2,11 @@ body {
 	background-color: #666;
 }
 
+.img-holder,
+.content-holder {
+	border: 4px double #fff;
+}
+
 .output {
 	color: #000;
 }
@@ -15,8 +20,7 @@ body {
 
 .metroid {
 	position: absolute;
-	left: -140px; 
-	left: 0;
+	left: -50%; 
 	top: 50%;
 	width: 140px;
 	height: 110px;
@@ -78,14 +82,59 @@ body {
 	z-index: -1;
 }
 
-@keyframes float {
+.pos-0 { 
+	animation: float-high 2s ease-in-out alternate infinite, moveleft 10s ease-in-out alternate-reverse infinite; 
+}
+.pos-1 { 
+	animation: float-mid 2s ease-in-out alternate infinite, moveright 10s ease-in-out alternate-reverse infinite;
+}
+.pos-2 { 
+	animation: float-low 2s ease-in-out alternate infinite, moveright 10s ease-in-out alternate-reverse infinite;
+}
+
+.delay-0 { animation-delay: none; }
+.delay-1 { animation-delay: 500ms; }
+.delay-2 { animation-delay: 700ms; }
+.delay-3 { animation-delay: 900ms; }
+.delay-4 { animation-delay: 1200ms; }
+.delay-5 { animation-delay: 1500ms; }
+.delay-6 { animation-delay: 1700ms; }
+.delay-7 { animation-delay: 1900ms; }
+.delay-8 { animation-delay: 2200ms; }
+.delay-9 { animation-delay: 2500ms; }
+
+@keyframes float-high {
 	0% {
 		top: 0;
 		height: 100px;
 	}
 
 	100% {
-		top: 80px;
+		top: 35%;
+		height: 115px;
+	}
+}
+
+@keyframes float-mid {
+	0% {
+		top: 30%;
+		height: 100px;
+	}
+
+	100% {
+		top: 45%;
+		height: 115px;
+	}
+}
+
+@keyframes float-low {
+	0% {
+		top: 55%;
+		height: 100px;
+	}
+
+	100% {
+		top: 70%;
 		height: 115px;
 	}
 }
@@ -98,6 +147,18 @@ body {
 	100%{
 		left: 200%;
 		left: 110%;
+	}
+}
+
+@keyframes moveleft {
+	0% {
+		right: -10%;
+		left: initial;
+	}
+
+	100%{
+		right: 110%;
+		left: initial;
 	}
 }
 

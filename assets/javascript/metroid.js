@@ -10,4 +10,17 @@ game_object.item_type = "Character";
 
 game_object.win_sound = new Audio('assets/audio/SamusShip_6.wav');
 
+// Hide the image from the previous theme
+game_object.toggle_image("hide");
+
+game_object.update_text("transition");
 game_object.game_start();
+
+game_object.metroid_launcher = function(){
+	var metroid_holder = document.createElement("div");
+	metroid_holder.className = 'metroid delay-' + Math.floor(Math.random()*10) + ' pos-' + Math.floor(Math.random()*3);
+	document.body.appendChild(metroid_holder);
+};
+
+game_object.metroid_launcher();
+

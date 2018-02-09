@@ -16,4 +16,8 @@ var applause = ["applause-1","applause-2","applause-3"];
 var rand_applause = applause[Math.floor(Math.random()*applause.length)];
 game_object.win_sound = new Audio('assets/audio/'+ rand_applause +'.mp3');
 
+// Hide the image from the previous theme
+game_object.toggle_image("hide");
+
+game_object.update_text("transition");
 game_object.game_start();
