@@ -16,4 +16,4 @@ game_object.item_type = "Cookie";
 
 game_object.win_sound = new Audio('assets/audio/Bite-Sound.mp3');
 
-game_object.update_text("transition");
+game_object.game_start();

@@ -10,4 +10,4 @@ game_object.item_type = "Character";
 
 game_object.win_sound = new Audio('assets/audio/SamusShip_6.wav');
 
-game_object.update_text("transition");
+game_object.game_start();

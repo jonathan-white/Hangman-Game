@@ -13,6 +13,7 @@ game_object.title = "2018 Movies";
 game_object.item_type = "Movie";
 
 var applause = ["applause-1","applause-2","applause-3"];
-game_object.win_sound = new Audio('assets/audio/'+ applause[Math.floor(Math.random()*applause.length)] +'.mp3');
+var rand_applause = applause[Math.floor(Math.random()*applause.length)];
+game_object.win_sound = new Audio('assets/audio/'+ rand_applause +'.mp3');
 
-game_object.update_text("transition");
+game_object.game_start();

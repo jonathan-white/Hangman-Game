@@ -1,4 +1,5 @@
 var game_object = {
+	themes: ["cookies","movies","metroid"],
 	title: "",
 	item_type: "",
 	num_wins: 0,
@@ -112,9 +113,63 @@ var game_object = {
 					document.getElementById('guessed').textContent = "";
 		}
 	},
-	clear:function(type){
+	clear: function(type){
 		document.head.removeChild(document.getElementById(type + "-css"));
 		document.body.removeChild(document.getElementById(type + "-js"));
+	},
+	changeType: function(el,theme_1,theme_2,theme_3){
+		document.getElementById(el).addEventListener("click", function(e){
+			if(!document.getElementById(theme_1 + "-css")){
+				// Create script & link elements for target theme's external files
+				var script = document.createElement("script");
+				var css = document.createElement("link");
+
+				script.setAttribute("src", "assets/javascript/"+ theme_1 +".js");
+				script.id = theme_1 + "-js";
+
+				css.id = theme_1 + "-css";
+				css.setAttribute("rel", "stylesheet");
+				css.setAttribute("href", "assets/css/"+ theme_1 +".css");
+
+				// Link target theme's css & js files in head and body sections 
+				document.head.appendChild(css);
+				document.body.appendChild(script);
+
+				// Remove css and js files associated with the deactivated themes
+				if(!(document.getElementById(theme_2 + "-css") === null)){
+					game_object.clear(theme_2);
+				}
+
+				if(!(document.getElementById(theme_3 + "-css") === null)){
+					game_object.clear(theme_3);
+				}
+			}
+		});	
+	},
+	addListeners: function(){
+		var buttons_list = document.getElementsByClassName('style-options')[0];
+		var buttons = buttons_list.getElementsByTagName('li');
+
+		var x = 1;
+		var y = 2;
+		for (i=0; i < buttons.length; i++){
+
+			if (x === game_object.themes.length){
+				x = 0;
+			}
+
+			if (y === game_object.themes.length){
+				y = 0;
+			}	
+
+			game_object.changeType(buttons[i].id, game_object.themes[i], game_object.themes[x], game_object.themes[y]);
+			x++;
+			y++;
+		}
+	},
+	initialize_game: function(){
+		game_object.addListeners();
+		game_object.game_start();
 	}
 };
 
@@ -153,98 +208,3 @@ document.onkeyup = function(event){
 	// Check if player has won or lost
 	game_object.check_outcome();
 };
-
-
-// When user clicks the Cookies Button, change JS and CSS
-document.getElementById("style-1").addEventListener("click", function(e){
-	console.log('Clicked style-1');
-	if(!document.getElementById("cookies-css")){
-		var script = document.createElement("script");
-		var css = document.createElement("link");
-
-		script.setAttribute("src", "assets/javascript/cookies.js");
-		script.id = "cookies-js";
-
-		css.id = "cookies-css";
-		css.setAttribute("rel", "stylesheet");
-		css.setAttribute("href", "assets/css/cookies.css");
-
-		document.head.appendChild(css);
-		document.body.appendChild(script);
-
-		if(!(document.getElementById("movies-css") === null)){
-			game_object.clear("movies");
-		}
-
-		if(!(document.getElementById("metroid-css") === null)){
-			game_object.clear("metroid");
-		}
-
-		game_object.game_start();
-	}
-});
-
-// When user clicks the Movies Button, change JS and CSS
-document.getElementById("style-2").addEventListener("click", function(e){
-	console.log('Clicked style-2');
-	if(!document.getElementById("movies-css")){
-		var script = document.createElement("script");
-		var css = document.createElement("link");
-
-		script.setAttribute("src", "assets/javascript/movies.js");
-		script.id = "movies-js";
-
-		css.id = "movies-css";
-		css.setAttribute("rel", "stylesheet");
-		css.setAttribute("href", "assets/css/movies.css");
-
-		document.head.appendChild(css);
-		document.body.appendChild(script);
-
-		if(!(document.getElementById("cookies-css") === null)){
-			game_object.clear("cookies");
-		}
-
-		if(!(document.getElementById("metroid-css") === null)){
-			game_object.clear("metroid");
-		}
-
-		game_object.game_start();
-	}
-});
-
-// When user clicks the Metroid Button, change JS and CSS
-document.getElementById("style-3").addEventListener("click", function(e){
-	console.log('Clicked style-3');
-	if(!document.getElementById("metroid-css")){
-		var script = document.createElement("script");
-		var css = document.createElement("link");
-		var metroid = document.createElement("div");
-
-		script.setAttribute("src", "assets/javascript/metroid.js");
-		script.id = "metroid-js";
-
-		css.id = "metroid-css";
-		css.setAttribute("rel", "stylesheet");
-		css.setAttribute("href", "assets/css/metroid.css");
-
-		metroid.className = "metroid";
-
-		document.head.appendChild(css);
-		document.body.appendChild(script);
-		document.body.appendChild(metroid);
-
-		document.getElementById("page-title").textContent = game_object.title;
-		document.getElementById("word-title").textContent = "Current " + game_object.item_type;
-
-		if(!(document.getElementById("cookies-css") === null)){
-			game_object.clear("cookies");
-		}
-
-		if(!(document.getElementById("movies-css") === null)){
-			game_object.clear("movies");
-		}
-
-		game_object.game_start();
-	}
-});
