@@ -14,42 +14,40 @@ var word_list =
 		"snickerdoodle", "cutout", "peppermint"
 	];
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keyup", function(event) {
 
 	if (!already_guessed(event.key)){
 		letters_guessed++;
 		remaining_guesses--;
 		guessed_letters.push(event.key);
-		document.getElementById('guessed').innerHTML += event.key + " ";
+		document.getElementById('guessed').textContent += event.key + " ";
 	}
 	
 	if (current_word.indexOf(event.key) > -1) {
 
 		for (var i=0; i < current_word.length; i++){
 			if (!correct_letters.includes(i) && current_word[i] == event.key) {
-				// console.log(current_word[i]);
 				correct_letters.push(i); 
 				correct_guesses++;
-				document.getElementById('letter-' + i).innerHTML = event.key;
+				document.getElementById('letter-' + i).textContent = event.key;
 			}
 		}
 
 		if (correct_letters.length === current_word.length){
 			victory = true;
 		}
-		// console.log(victory);
 	}
 
-	document.getElementById('remaining-guesses').innerHTML = remaining_guesses;
+	document.getElementById('remaining-guesses').textContent = remaining_guesses;
 
 	if (remaining_guesses === 0) {
-		document.getElementById('status-title').innerHTML = "";
-		document.getElementById('status').innerHTML = "Better luck next time...";
+		document.getElementById('status-title').textContent = "";
+		document.getElementById('status').textContent = "Better luck next time...";
 		initialize_game();
 	}else if (victory) {
 		num_wins++;
-		document.getElementById('status-title').innerHTML = "Previous Cookie:";
-		document.getElementById('status').innerHTML = current_word;
+		document.getElementById('status-title').textContent = "Previous Cookie:";
+		document.getElementById('status').textContent = current_word;
 
 		$('.img-holder img').attr("src","assets/images/"+ current_word +".jpg");
 		initialize_game();
@@ -64,25 +62,23 @@ function already_guessed(e) {
 };
 
 function initialize_game(){
-	// $('.modal').addClass('hide');
 	letters_guessed = 0;
 	correct_guesses = 0;
 	victory = false;
 	guessed_letters = [];
 	correct_letters = [];
-	document.getElementById('wins').innerHTML = num_wins +" Wins";
-	document.getElementById('guessed').innerHTML = "";
+	document.getElementById('wins').textContent = num_wins +" Wins";
+	document.getElementById('guessed').textContent = "";
 
 	var random = Math.floor(Math.random()*word_list.length);
 	console.log(random);
-
 
 	// Select a random word from the list
 	current_word = word_list[random];
 
 	// Update the number of remaining guesses
 	remaining_guesses = (current_word.length * 2) - 1
-	document.getElementById('remaining-guesses').innerHTML = remaining_guesses;
+	document.getElementById('remaining-guesses').textContent = remaining_guesses;
 
 	// update word-showing with the number of letters for the selected word
 	$('#word-showing').empty();

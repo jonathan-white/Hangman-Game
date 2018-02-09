@@ -7,16 +7,25 @@
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/main_style.css">
+	<link id="cookies-css" rel="stylesheet" href="assets/css/cookies.css">
 </head>
 <body>
+	<div class="metroid"></div>
 	<header>
-		<div id="status-title"><h2></h2></div>
-		<div id="status"></div>
+		<h1 id="page-title"></h1>
 	</header>
 	<section class="clearfix">
 		<div class="img-holder">
-			<img src="assets/images/cookies.jpg" alt="cookies">
+			<div>
+				<div id="status-title"></div>
+				<div id="status"></div>
+			</div>
+			<div class="showcase">
+				<img src="assets/images/cookies.jpg" alt="cookies">
+			</div>
+			<!-- <div id="metroid"></div> -->
 		</div>
 		<div class="content-holder">
 
@@ -31,8 +40,8 @@
 			</div>
 
 			<!-- Display Correct Guesses -->
-			<div class="word">
-				<h2>Current Word</h2>
+			<div>
+				<h2 id="word-title">Current Cookie</span></h2>
 				<ul id="word-showing">
 					<li id="letter-0" class="output"></li>
 					<li id="letter-1" class="output"></li>
@@ -44,10 +53,11 @@
 				</ul>
 			</div>
 
+			<br>
 			<!-- Display Info on Remaining Guesses & Previous Guesses -->
 			<div>
 				<div>
-					<h2>Number of guesses remaining</h2>
+					<h2 class="guess-title">Number of guesses remaining</h2>
 					<h2 id="remaining-guesses" class="output">12</h2>
 				</div>
 				<div>
@@ -57,6 +67,11 @@
 			</div>
 		</div>
 		<footer>&copy; 2018 Jon White</footer>
+		<ul class="style-options">
+			<li id="style-1">Cookies</li>
+			<li id="style-2">Movies</li>
+			<li id="style-3">Metroid</li>
+		</ul>
 	</section>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -65,5 +80,6 @@
 		// initialize_game();
 		game_object.game_start();
 	</script>
+	<script id="cookies-js" src="assets/javascript/cookies.js"></script>
 </body>
 </html>

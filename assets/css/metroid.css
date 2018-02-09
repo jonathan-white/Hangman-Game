@@ -1,0 +1,120 @@
+body {
+	background-color: #666;
+}
+
+.output {
+	color: #000;
+}
+
+/* Metroid fun */
+.metroid::before,
+.metroid::after {
+	content: '';
+	position: absolute;
+}
+
+.metroid {
+	position: absolute;
+	left: -140px; 
+	left: 0;
+	top: 50%;
+	width: 140px;
+	height: 110px;
+	background-color: #80ffff; 
+	background-repeat: no-repeat;	
+	background-image: 
+	    radial-gradient(ellipse at 20% -93%, rgba(255,255,255,0.2) 50%, transparent 50%), 
+	    repeating-radial-gradient(ellipse at 54% 72%, rgba(255,255,255,0.2) 0%, transparent 50%),
+	    radial-gradient(farthest-corner at 44% 44%, rgba(255,255,255,0.2) 50%, transparent 50%),
+	    radial-gradient(circle, #cc0080 50%, transparent 50%), 
+	    radial-gradient(farthest-corner at 44% 44%, rgba(255,255,255,0.2) 50%, transparent 50%),
+	    radial-gradient(circle, #cc0080 50%, transparent 50%), 
+	    radial-gradient(farthest-corner at 44% 44%, rgba(255,255,255,0.2) 50%, transparent 50%),
+	    radial-gradient(circle, #cc0055 50%, transparent 50%), 
+	    radial-gradient(ellipse at 50% 300%, #7b2a99 50%, transparent 50%), 
+	    radial-gradient(ellipse at 50% 280%, #7b6c99 50%, transparent 50%), 
+	    radial-gradient(ellipse at 50% 260%, #7b2a99 50%, transparent 50%), 
+	    radial-gradient(ellipse at 50% 230%, #7b6c99 50%, rgba(0,0,0,0.1) 50%), 
+	    radial-gradient(ellipse at 50% 100%, rgba(0,0,0,0.7) 40%, transparent 60%), 
+	    linear-gradient(to right, rgba(0,255,0,.3), rgba(0,255,0,0.3));
+	background-size: 41% 63%, 100% 106%,20% 20%, 50% 50%, 20% 20%, 50% 50%, 20% 20%, 50% 50%, 
+		100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%;
+	background-position: 24px 5px, 50% 100%,25px 57px,7% 95%,83px 57px, 93% 95%,
+		55px 32px, 50% 50%,0 0,0 0,0 0,0 0,	0 0,0 0;
+	border-top-left-radius: 110px;
+	border-top-right-radius: 110px;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	box-shadow: inset 0 6px 0 10px #80ffff, 0 0 60px 2px #0ff; 
+	animation: float 2s ease-in-out alternate infinite, moveright 10s ease-in-out alternate-reverse infinite;
+	z-index: initial;
+}
+
+.metroid::before {
+	width: 70%;
+	height: 95%;
+	left: 50%;
+	top: 34%;
+	margin-left: -2.9375rem;
+	background-repeat: no-repeat;
+	background-position: 0 100%;
+	border-radius: 50%;
+	box-shadow: inset -1rem .4375rem 0 #f6ca51, inset 1rem .4375rem 0 #f6ca51;
+	animation: mandible_before 3s alternate-reverse infinite;
+	z-index: -1;
+}
+
+.metroid::after {
+	width: 45%;
+	height: 82%;
+	left: 63%;
+	top: 33%;
+	margin-left: -2.9375rem;
+	background-repeat: no-repeat;
+	background-position: 0 100%;
+	border-radius: 50%;
+	box-shadow: inset -.75rem .4375rem 0 #f6ca51, inset .75rem .4375rem 0 #f6ca51;
+	animation: mandible_after 3s alternate-reverse infinite;
+	z-index: -1;
+}
+
+@keyframes float {
+	0% {
+		top: 0;
+		height: 100px;
+	}
+
+	100% {
+		top: 80px;
+		height: 115px;
+	}
+}
+
+@keyframes moveright {
+	0% {
+		left: -10%;
+	}
+
+	100%{
+		left: 200%;
+		left: 110%;
+	}
+}
+
+@keyframes mandible_before {
+	100% {
+		width: 68%;
+		height: 61%;
+		top: 76%;
+		left: 50%
+	}
+}
+
+@keyframes mandible_after {
+	100% {
+		width: 45%;
+		height: 82%;
+		top: 36%;
+		left: 61%
+	}
+}
