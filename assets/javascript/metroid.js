@@ -20,7 +20,7 @@ game_object.toggle_image("hide");
 game_object.update_text("transition");
 game_object.game_start();
 
-game_object.update_image = function(result){};
+// game_object.update_image = function(result){};
 
 game_object.metroid_launcher = function(){
 	var metroid_holder = document.createElement("div");

@@ -11,7 +11,7 @@ game_object.items = [
 ];
 
 game_object.title = "Movies";
-game_object.subtitle = "2018 Movies";
+game_object.subtitle = "2018 Blockbusters";
 game_object.item_type = "Movie";
 
 game_object.gen_rand_sound = function(){
@@ -28,6 +28,6 @@ game_object.toggle_image("hide");
 game_object.update_text("transition");
 game_object.game_start();
 
-game_object.update_image = function(result){};
+// game_object.update_image = function(result){};
 
 game_object.metroid_launcher = function(){};
