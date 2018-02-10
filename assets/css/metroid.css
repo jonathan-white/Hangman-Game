@@ -137,6 +137,16 @@ body {
 	visibility: visible;
 }
 
+.scoreholder {
+	/*display: inline-block;*/
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	font-size: 40px;
+	color: #f3c;
+	text-shadow: 0 0 20px #f3c;
+}
+
 .pos-0 { 
 	animation: float-high 2s ease-in-out alternate infinite, moveleft 10s ease-in-out alternate-reverse infinite; 
 }

@@ -1,21 +1,21 @@
 var game_object = {
-	themes: ["cookies","movies","metroid"],
-	image: document.getElementsByClassName('showcase')[0].getElementsByTagName('img')[0],
-	title: "",
-	subtitle: "",
-	item_type: "",
-	num_wins: 0,
-	current_item: "",
-	remaining_guesses: 12,
-	letters_guessed: 0,
-	correct_guesses: 0,
-	correct_letters: [],
-	guessed_letters: [],
-	items: null,
-	victory: false,
-	difficulty_levels: ["Easy","Normal","Hard"],
-	difficulty: "Normal",
-	win_sound: new Audio('assets/audio/Bite-Sound.mp3'),
+	"themes": ["cookies","movies","metroid"],
+	"image": document.getElementsByClassName('showcase')[0].getElementsByTagName('img')[0],
+	"title": "",
+	"subtitle": "",
+	"item_type": "",
+	"num_wins": 0,
+	"current_item": "",
+	"remaining_guesses": 12,
+	"letters_guessed": 0,
+	"correct_guesses": 0,
+	"correct_letters": [],
+	"guessed_letters": [],
+	"items": null,
+	"victory": false,
+	"difficulty_levels": ["Easy","Normal","Hard"],
+	"difficulty": "Normal",
+	"win_sound": new Audio('assets/audio/Bite-Sound.mp3'),
 	game_start: function (){
 		game_object.letters_guessed = 0;
 		game_object.correct_guesses = 0;
@@ -58,6 +58,12 @@ var game_object = {
 		}
 	},
 	check_keypress: function(){
+		// if guess count is > 20% of the number of letters in the chosen word, close curtains (Movies)
+		var overflow_keys = Math.floor(game_object.current_item.name.length * .20);
+		if (game_object.letters_guessed >= overflow_keys) {
+			game_object.close_curtains();
+		}
+
 		// If player guesses incorrectly, add to guessed letters and reduce remaining guesses
 		var typed_key = event.key.toLowerCase();
 		if (!game_object.guessed_letters.includes(typed_key)){
@@ -105,6 +111,10 @@ var game_object = {
 		}else if (game_object.victory) {
 			// Player Wins
 			game_object.num_wins++;
+
+			// Open curtains
+			game_object.open_curtains();
+
 			game_object.gen_rand_sound();
 			game_object.win_sound.play();
 			game_object.update_text("win");
@@ -226,7 +236,9 @@ var game_object = {
 	gen_rand_sound: function(){},
 	destroy_metroid: function(){},
 	video_start: function(){},
-	video_pause: function(){}
+	video_pause: function(){},
+	open_curtains: function(){},
+	close_curtains: function(){}
 };
 
 document.onkeyup = function(event){

@@ -95,8 +95,8 @@ main {
 
 .showcase {
 	position: relative;
-	height: calc(100% - 46px);
 	height: 80%;
+	overflow: hidden;
 }
 
 .img-holder img {
@@ -184,7 +184,7 @@ footer {
 	color: #000;
 	cursor: pointer;
 	border-radius: 50% 50% / 10px;
-	transition: all 1s;
+	transition: all 1s 200ms;
 }
 
 #theme-1.active,
@@ -329,7 +329,14 @@ footer {
 	color: #fff;
 }
 
-
 .video-background {
+	display: none;
+}
+
+/*-------------------*/
+/*-- Metroid Score --*/
+/*-------------------*/
+
+.scoreholder {
 	display: none;
 }

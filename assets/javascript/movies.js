@@ -1,13 +1,13 @@
 game_object.items = [
-	{ name: "black panther", image: "black_panther.jpg" },
-	{ name: "venom", image: "venom.jpg" },
-	{ name: "solo", image: "solo.jpg" },
-	{ name: "annihilation", image: "annihilation.jpg" },
-	{ name: "tomb raider", image: "tomb_raider.jpg" },
-	{ name: "avengers: infinity war", image: "infinity_war.jpg" },
-	{ name: "pacific rim uprising", image: "pacific_rim_uprising.jpg" },
-	{ name: "ready player one", image: "rpo.jpg" },
-	{ name: "rampage", image: "rampage.jpg" }
+	{ "name": "black panther", "image": "black_panther.jpg" },
+	{ "name": "venom", "image": "venom.jpg" },
+	{ "name": "solo", "image": "solo.jpg" },
+	{ "name": "annihilation", "image": "annihilation.jpg" },
+	{ "name": "tomb raider", "image": "tomb_raider.jpg" },
+	{ "name": "avengers: infinity war", "image": "infinity_war.jpg" },
+	{ "name": "pacific rim uprising", "image": "pacific_rim_uprising.jpg" },
+	{ "name": "ready player one", "image": "rpo.jpg" },
+	{ "name": "rampage", "image": "rampage.jpg" }
 ];
 
 game_object.title = "Movies";
@@ -40,3 +40,18 @@ game_object.video_pause = function(){
 };
 
 game_object.video_pause();
+
+
+game_object.open_curtains = function(){
+	var curtains = document.getElementsByClassName("curtain");
+	for (var i = 0; i < curtains.length; i++) {
+		curtains[i].classList.add("open");
+	}
+};
+
+game_object.close_curtains = function(){
+	var curtains = document.getElementsByClassName("curtain");
+	for (var i = 0; i < curtains.length; i++) {
+		curtains[i].classList.remove("open");
+	}
+};
