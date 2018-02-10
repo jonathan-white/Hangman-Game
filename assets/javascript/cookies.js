@@ -54,3 +54,6 @@ game_object.update_image = function(result){
 };
 
 game_object.metroid_launcher = function(){};
+
+var bgvideo = document.getElementById('bg-video');
+bgvideo.pause();

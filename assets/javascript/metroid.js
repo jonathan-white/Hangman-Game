@@ -30,3 +30,6 @@ game_object.metroid_launcher = function(){
 
 game_object.metroid_launcher();
 
+var bgvideo = document.getElementById('bg-video');
+bgvideo.play();
+
