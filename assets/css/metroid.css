@@ -1,14 +1,25 @@
 body {
-	background-color: #666;
+	background-color: #000;
+	background-image: url(../images/bg-metroid.jpg);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+}
+
+.spacer {
+	display: block;
+	width: 20%;
 }
 
 .img-holder,
 .content-holder {
 	border: 4px double #fff;
+	background-color: #222;
+	z-index: -1;
 }
 
 .output {
-	color: #000;
+	color: #777;
 }
 
 /* Metroid fun */
@@ -141,23 +152,22 @@ body {
 
 @keyframes moveright {
 	0% {
-		left: -10%;
+		left: -50%;
 	}
 
 	100%{
-		left: 200%;
-		left: 110%;
+		left: 120%;
 	}
 }
 
 @keyframes moveleft {
 	0% {
-		right: -10%;
+		right: -50%;
 		left: initial;
 	}
 
 	100%{
-		right: 110%;
+		right: 120%;
 		left: initial;
 	}
 }

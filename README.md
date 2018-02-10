@@ -4,12 +4,12 @@
 
 This simple game challenges a user to guess a word or phrase based on the selected theme. I hope you have a much fun playing this as I did making it.
 
+
 ## Getting Started
 
 To start the game click the link below and start typing!
+https://motionswing.github.io/Hangman-Game/
 
-https://motionswing.github.io/Hangman-Game/ - automatic!
-[Hangman](https://motionswing.github.io/Hangman-Game/)
 
 ## Themes
 
@@ -17,6 +17,13 @@ https://motionswing.github.io/Hangman-Game/ - automatic!
 * Movies - Some upcoming blockbuster movies of 2018
 * Metroid - One of my favorite childhood games 
 
+
 ## Difficulty Settings
 
 The game offers three difficulty settings: Easy, Normal and Hard. Try your hand at Hard if you dare.
+
+
+## Author
+
+This project is maintained and written by 
+(Jon White) https://motionswing.github.io/Responsive-Portfolio/index.html

@@ -9,15 +9,25 @@ game_object.items = [
 	{ name: "ready player one", image: "rpo.jpg" },
 	{ name: "rampage", image: "rampage.jpg" }
 ];
-game_object.title = "2018 Movies";
+
+game_object.title = "Movies";
+game_object.subtitle = "2018 Movies";
 game_object.item_type = "Movie";
 
-var applause = ["applause-1","applause-2","applause-3"];
-var rand_applause = applause[Math.floor(Math.random()*applause.length)];
-game_object.win_sound = new Audio('assets/audio/'+ rand_applause +'.mp3');
+game_object.gen_rand_sound = function(){
+	var applause = ["applause-1","applause-2","applause-3"];
+	var rand_applause = applause[Math.floor(Math.random()*applause.length)];
+	game_object.win_sound = new Audio('assets/audio/'+ rand_applause +'.mp3');
+};
+
+game_object.gen_rand_sound();
 
 // Hide the image from the previous theme
 game_object.toggle_image("hide");
 
 game_object.update_text("transition");
 game_object.game_start();
+
+game_object.update_image = function(result){};
+
+game_object.metroid_launcher = function(){};

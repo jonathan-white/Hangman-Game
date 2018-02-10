@@ -13,71 +13,44 @@
 </head>
 <body>
 	<header>
-		<h1 id="page-title"></h1>
+		<h1 id="page-title">Cookies</h1>
+		<h2 id="page-subtitle"></h2>
 	</header>
-	<section class="clearfix">
-		<div class="img-holder">
+	<main class="clearfix">
+		<section class="img-holder">
 			<div>
-				<div id="status-title"></div>
-				<div id="status"></div>
+				<p id="status-title">Cookies</p>
+				<h3 id="status">Can you guess the type of cookie?</h3>
 			</div>
 			<div class="showcase">
 				<img src="assets/images/cookies.jpg" alt="cookies">
 			</div>
-			<!-- <div id="metroid"></div> -->
-		</div>
-		<div class="content-holder">
-
-			<!-- Instructions -->
-			<div>
-				<h2>Press any key to get started!</h2>
-			</div>
-
-			<!-- Display Number of Wins -->
-			<div>
-				<h2 id="wins" class="output">Wins</h2>
-			</div>
-
-			<!-- Display Correct Guesses -->
-			<div>
-				<h2 id="word-title">Current Cookie</span></h2>
-				<ul id="word-showing">
-					<li id="letter-0" class="output"></li>
-					<li id="letter-1" class="output"></li>
-					<li id="letter-2" class="output"></li>
-					<li id="letter-3" class="output"></li>
-					<li id="letter-4" class="output"></li>
-					<li id="letter-5" class="output"></li>
-					<li id="letter-6" class="output"></li>
-				</ul>
-			</div>
-
-			<br>
-			<!-- Display Info on Remaining Guesses & Previous Guesses -->
-			<div>
-				<div>
-					<h2 class="guess-title">Number of guesses remaining</h2>
-					<h2 id="remaining-guesses" class="output">12</h2>
-				</div>
-				<div>
-					<h2>Letters already guessed</h2>
-					<h2 id="guessed" class="output"></h2>
-				</div>
-			</div>
-		</div>
-		<footer>&copy; 2018 Jon White</footer>
-		<ul class="theme-options">
-			<li id="theme-1" class="active">Cookies</li>
-			<li id="theme-2">Movies</li>
-			<li id="theme-3">Metroid</li>
-		</ul>
-		<ul class="difficulty-options">
-			<li id="option-1" data-level="Easy">Easy</li>
-			<li id="option-2" data-level="Regular" class="active">Normal</li>
-			<li id="option-3" data-level="Hard">Hard</li>
-		</ul>
-	</section>
-
+		</section>
+		<section class="spacer"></section>
+		<section class="content-holder">			
+			<p>Press any key to get started!</p>				
+			<p id="wins" class="output">Wins</p>			
+			<p id="word-title">Current Cookie</p>
+			<ul id="word-showing" class="clearfix">
+				<li id="letter-0" class="output"></li>
+			</ul>	
+			<p>Number of guesses remaining</p>
+			<p id="remaining-guesses" class="output">12</p>
+			<p>Letters already guessed</p>
+			<p id="guessed" class="output"></p>
+		</section>
+	</main>
+	<ul class="theme-options">
+		<li id="theme-1" class="active">Cookies</li>
+		<li id="theme-2">Movies</li>
+		<li id="theme-3">Metroid</li>
+	</ul>
+	<ul class="difficulty-options">
+		<li id="option-1" data-level="Easy">Easy</li>
+		<li id="option-2" data-level="Regular" class="active">Normal</li>
+		<li id="option-3" data-level="Hard">Hard</li>
+	</ul>
+	<footer>&copy; 2018 Jon White</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="assets/javascript/game.js"></script>
 	<script>

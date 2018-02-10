@@ -11,8 +11,12 @@ game_object.items = [
 	{ name: "sugar", image: "sugar.jpg" },					//# of Repeat letters: 0
 	{ name: "peppermint", image: "peppermint.jpg" }			//# of Repeat letters: 3
 ];
-game_object.title = "Can you guess the type of cookie?";
+
+game_object.title = "Cookies";
+game_object.subtitle = "Can you guess the type of cookie?";
 game_object.item_type = "Cookie";
+
+game_object.gen_rand_sound = function(){};
 
 game_object.win_sound = new Audio('assets/audio/Bite-Sound.mp3');
 
@@ -48,3 +52,5 @@ game_object.update_image = function(result){
 	}
 	game_object.image.setAttribute("src", "assets/images/"+ selected_image);
 };
+
+game_object.metroid_launcher = function(){};

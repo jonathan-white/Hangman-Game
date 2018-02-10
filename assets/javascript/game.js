@@ -2,6 +2,7 @@ var game_object = {
 	themes: ["cookies","movies","metroid"],
 	image: document.getElementsByClassName('showcase')[0].getElementsByTagName('img')[0],
 	title: "",
+	subtitle: "",
 	item_type: "",
 	num_wins: 0,
 	current_item: "",
@@ -104,6 +105,7 @@ var game_object = {
 		}else if (game_object.victory) {
 			// Player Wins
 			game_object.num_wins++;
+			game_object.gen_rand_sound();
 			game_object.win_sound.play();
 			game_object.update_text("win");
 
@@ -121,6 +123,8 @@ var game_object = {
 	update_text: function(theme){
 		switch(theme){
 			case "transition":
+				document.getElementById('page-title').textContent = game_object.title;
+				document.getElementById('page-subtitle').textContent = game_object.subtitle;
 				document.getElementById('status-title').textContent = "";
 				document.getElementById('status').textContent = "";
 				break;
@@ -137,7 +141,7 @@ var game_object = {
 				break;
 			default: 
 				document.getElementById('remaining-guesses').textContent = game_object.remaining_guesses;
-				document.getElementById('page-title').textContent = game_object.title;
+				document.getElementById('page-subtitle').textContent = game_object.subtitle;
 				document.getElementById('word-title').textContent = "Current " + game_object.item_type;
 				// Update the win count
 				if(game_object.num_wins === 1)
@@ -218,7 +222,8 @@ var game_object = {
 	toggle_image: function(display){
 		(display === "hide") ? game_object.image.style.display = "none" : game_object.image.style.display = "block";
 	},
-	metroid_launcher: function(){}
+	metroid_launcher: function(){},
+	gen_rand_sound: function(){}
 };
 
 document.onkeyup = function(event){
