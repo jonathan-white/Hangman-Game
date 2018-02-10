@@ -47,3 +47,7 @@ main {
 .showcase {
 	height: calc(100% - 66px);
 }
+
+footer a {
+	color: #000;
+}

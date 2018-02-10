@@ -234,11 +234,23 @@ var game_object = {
 	},
 	metroid_launcher: function(){},
 	gen_rand_sound: function(){},
-	destroy_metroid: function(){},
 	video_start: function(){},
 	video_pause: function(){},
-	open_curtains: function(){},
-	close_curtains: function(){}
+	open_curtains: function(){
+		var curtains = document.getElementsByClassName("curtain");
+		for (var i = 0; i < curtains.length; i++) {
+			curtains[i].classList.add("open");
+		}
+	},
+	close_curtains: function(){
+		var curtains = document.getElementsByClassName("curtain");
+		for (var i = 0; i < curtains.length; i++) {
+			curtains[i].classList.remove("open");
+		}
+	},
+	hide_score: function(){
+		document.getElementsByClassName("scoreholder")[0].style.display = 'none';
+	}
 };
 
 document.onkeyup = function(event){

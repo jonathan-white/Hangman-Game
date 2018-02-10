@@ -26,7 +26,6 @@ game_object.game_start();
 game_object.metroid_launcher = function(){
 	var metroid = document.createElement("div");
 	metroid.className = 'metroid delay-' + Math.floor(Math.random()*10) + ' pos-' + Math.floor(Math.random()*3);
-	// document.body.appendChild(metroid);
 
 	game_object.pop_sound = new Audio('assets/audio/Seedling_4.wav');
 	// Detect mouse clicks
@@ -38,12 +37,11 @@ game_object.metroid_launcher = function(){
 
 		// Destroy score
 		setTimeout(function() {
-			// game_object.increaseScore(100);
 			metroid.remove();
 		}, 1000);
 	});
 
-	// Detect touch
+	// Detect touch (mobile)
 	metroid.addEventListener('touchstart', function(e){
 		e.preventDefault();
 		var touch = e.touches;
@@ -54,7 +52,6 @@ game_object.metroid_launcher = function(){
 
 		// Destroy score
 		setTimeout(function() {
-			// game_object.increaseScore(100);
 			metroid.remove();
 		}, 1000);
 	});
@@ -64,10 +61,6 @@ game_object.metroid_launcher = function(){
 };
 
 game_object.metroid_launcher();
-
-game_object.destroy_metroid = function(){
-
-};
 
 game_object.bgvideo = document.getElementById('bg-video');
 

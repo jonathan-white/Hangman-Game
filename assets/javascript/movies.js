@@ -31,7 +31,6 @@ game_object.game_start();
 // game_object.update_image = function(result){};
 
 game_object.metroid_launcher = function(){};
-game_object.destroy_metroid = function(){};
 
 game_object.bgvideo = document.getElementById('bg-video');
 game_object.video_start = function(){};
@@ -40,18 +39,5 @@ game_object.video_pause = function(){
 };
 
 game_object.video_pause();
-
-
-game_object.open_curtains = function(){
-	var curtains = document.getElementsByClassName("curtain");
-	for (var i = 0; i < curtains.length; i++) {
-		curtains[i].classList.add("open");
-	}
-};
-
-game_object.close_curtains = function(){
-	var curtains = document.getElementsByClassName("curtain");
-	for (var i = 0; i < curtains.length; i++) {
-		curtains[i].classList.remove("open");
-	}
-};
+game_object.close_curtains();
+game_object.hide_score();

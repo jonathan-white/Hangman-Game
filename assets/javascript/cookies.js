@@ -54,7 +54,6 @@ game_object.update_image = function(result){
 };
 
 game_object.metroid_launcher = function(){};
-game_object.destroy_metroid = function(){};
 game_object.video_start = function(){};
 
 game_object.bgvideo = document.getElementById('bg-video');
@@ -64,3 +63,4 @@ game_object.video_pause = function(){
 };
 
 game_object.video_pause();
+game_object.hide_score();
