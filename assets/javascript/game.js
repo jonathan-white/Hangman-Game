@@ -97,7 +97,7 @@ var game_object = {
 			game_object.update_text("loss");
 
 			//remove/replace the displayed image
-			game_object.toggle_image("hide");
+			game_object.update_image("loss");
 
 			// Restart the game
 			game_object.game_start();
@@ -107,17 +107,17 @@ var game_object = {
 			game_object.win_sound.play();
 			game_object.update_text("win");
 
-			// :'-)
+			// Launch a metroid
 			game_object.metroid_launcher();
 
 			// Display the image
-			game_object.toggle_image("show");
+			game_object.update_image("win");
 
-			game_object.image.setAttribute("src", "assets/images/"+ game_object.current_item.image);
-			game_object.image.setAttribute("alt", game_object.current_item.name);
+			// Restart the game
 			game_object.game_start();
 		}
 	},
+	update_image: function() {},
 	update_text: function(theme){
 		switch(theme){
 			case "transition":

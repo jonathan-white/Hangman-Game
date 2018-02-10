@@ -21,3 +21,30 @@ game_object.toggle_image("hide");
 
 game_object.update_text("transition");
 game_object.game_start();
+
+
+game_object.update_image = function(result){
+	var selected_image;
+
+	if (result === "win"){
+		game_object.toggle_image("show");
+		selected_image = game_object.current_item.image;
+		game_object.image.setAttribute("alt", game_object.current_item.name);
+	}else if(result === "loss"){
+		var pics = [
+			"cm.gif",
+			"cm-delete-cookies-funny-images.jpg",
+			"cm-fruit.jpg",
+			"cm-nocookiesforyou.jpg",
+			"cm-quotes.jpg",
+			"cm-vs-keebler.gif",
+			"cookie-monster.gif"
+		];
+		selected_image = pics[Math.floor(Math.random()*pics.length)];
+
+		// game_object.toggle_image("hide");
+		game_object.toggle_image("show");
+		game_object.image.setAttribute("alt", "No cookies for you");		
+	}
+	game_object.image.setAttribute("src", "assets/images/"+ selected_image);
+};

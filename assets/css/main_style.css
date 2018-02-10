@@ -134,7 +134,7 @@ footer:hover::after {
 }
 
 /*----------------*/
-/*--theme Buttons-*/
+/*--Theme Buttons-*/
 /*----------------*/
 
 .theme-options {
@@ -159,7 +159,6 @@ footer:hover::after {
 
 #theme-1.active,
 #theme-1:hover {
-	/*TODO: Use background-image to create chocolate chip morsels*/
 	background-color: rgba(0,0,255,0.7);
 	background-color: brown;
 	color: #fff;
