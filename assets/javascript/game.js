@@ -223,7 +223,10 @@ var game_object = {
 		(display === "hide") ? game_object.image.style.display = "none" : game_object.image.style.display = "block";
 	},
 	metroid_launcher: function(){},
-	gen_rand_sound: function(){}
+	gen_rand_sound: function(){},
+	destroy_metroid: function(){},
+	video_start: function(){},
+	video_pause: function(){}
 };
 
 document.onkeyup = function(event){

@@ -1,3 +1,7 @@
+/*-------------------*/
+/*--Style Overrides--*/
+/*-------------------*/
+
 body {
 	background-color: #000;
 	background-image: url(../images/bg-metroid.jpg);
@@ -23,7 +27,10 @@ body {
 	color: #777;
 }
 
-/* Metroid fun */
+/*-----------*/
+/*--Metroid--*/
+/*-----------*/
+
 .metroid::before,
 .metroid::after {
 	content: '';
@@ -62,7 +69,7 @@ body {
 	border-bottom-left-radius: 50px;
 	border-bottom-right-radius: 50px;
 	box-shadow: inset 0 6px 0 10px #80ffff, 0 0 60px 2px #0ff; 
-	animation: float 2s ease-in-out alternate infinite, moveright 10s ease-in-out alternate-reverse infinite;
+	animation: float-mid 2s ease-in-out alternate infinite, moveright 10s ease-in-out alternate-reverse infinite;
 	z-index: initial;
 }
 
@@ -94,6 +101,42 @@ body {
 	z-index: -1;
 }
 
+@keyframes mandible_before {
+	100% {
+		width: 68%;
+		height: 61%;
+		top: 76%;
+		left: 50%
+	}
+}
+
+@keyframes mandible_after {
+	100% {
+		width: 45%;
+		height: 82%;
+		top: 36%;
+		left: 61%
+	}
+}
+
+.metroid.score {
+	visibility: hidden;
+	/*animation: 0;*/
+}
+
+.metroid.score::after {
+	content: '+100';
+	position: absolute;
+	font-size: 80px;
+	color: #f3c;
+	text-shadow: 0 0 20px #f3c;
+	box-shadow: none;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	visibility: visible;
+}
+
 .pos-0 { 
 	animation: float-high 2s ease-in-out alternate infinite, moveleft 10s ease-in-out alternate-reverse infinite; 
 }
@@ -104,7 +147,7 @@ body {
 	animation: float-low 2s ease-in-out alternate infinite, moveright 10s ease-in-out alternate-reverse infinite;
 }
 
-.delay-0 { animation-delay: none; }
+.delay-0 { animation-delay: initial; }
 .delay-1 { animation-delay: 500ms; }
 .delay-2 { animation-delay: 700ms; }
 .delay-3 { animation-delay: 900ms; }
@@ -173,24 +216,9 @@ body {
 	}
 }
 
-@keyframes mandible_before {
-	100% {
-		width: 68%;
-		height: 61%;
-		top: 76%;
-		left: 50%
-	}
-}
-
-@keyframes mandible_after {
-	100% {
-		width: 45%;
-		height: 82%;
-		top: 36%;
-		left: 61%
-	}
-}
-
+/*--------------------*/
+/*--Background Video--*/
+/*--------------------*/
 
 .video-background {
 	display: block;
@@ -226,3 +254,5 @@ body {
 		display: none;
 	}
 }
+
+

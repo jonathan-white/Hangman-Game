@@ -96,6 +96,7 @@ main {
 .showcase {
 	position: relative;
 	height: calc(100% - 46px);
+	height: 80%;
 }
 
 .img-holder img {

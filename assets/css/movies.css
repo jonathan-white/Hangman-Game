@@ -1,3 +1,6 @@
+body {
+	background-color: #000;
+}
 
 header {
 	perspective-origin: 48% 22%;

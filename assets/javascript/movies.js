@@ -31,6 +31,12 @@ game_object.game_start();
 // game_object.update_image = function(result){};
 
 game_object.metroid_launcher = function(){};
+game_object.destroy_metroid = function(){};
 
-var bgvideo = document.getElementById('bg-video');
-bgvideo.pause();
+game_object.bgvideo = document.getElementById('bg-video');
+game_object.video_start = function(){};
+game_object.video_pause = function(){
+	game_object.bgvideo.pause();	
+};
+
+game_object.video_pause();

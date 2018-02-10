@@ -23,13 +23,54 @@ game_object.game_start();
 // game_object.update_image = function(result){};
 
 game_object.metroid_launcher = function(){
-	var metroid_holder = document.createElement("div");
-	metroid_holder.className = 'metroid delay-' + Math.floor(Math.random()*10) + ' pos-' + Math.floor(Math.random()*3);
-	document.body.appendChild(metroid_holder);
-};
+	var metroid = document.createElement("div");
+	metroid.className = 'metroid delay-' + Math.floor(Math.random()*10) + ' pos-' + Math.floor(Math.random()*3);
+	// document.body.appendChild(metroid);
 
+	// Detect mouse clicks
+	metroid.addEventListener('mousedown', function(e){
+		console.log(e.clientX + " - " + e.clientY);
+		// Pop the metroid and display '+100' score
+		this.classList.add("score");
+
+		// Destroy score
+		setTimeout(function() {
+			console.log(metroid);
+			metroid.remove();
+		}, 1000);
+
+		// game_object.destroy_metroid();
+	});
+
+	// Detect touch
+	metroid.addEventListener('touchstart', function(e){
+		var touch = e.touches[0];
+		console.log(touch.pageX + " - " + touch.pageY);
+
+		// Pop the metroid and display '+100' score
+		this.classList.add("score");
+
+		// Destroy score
+		setTimeout(function() {
+			console.log(metroid);
+			metroid.remove();
+		}, 1000);
+	});
+
+
+	document.body.appendChild(metroid);
+};
 game_object.metroid_launcher();
 
-var bgvideo = document.getElementById('bg-video');
-bgvideo.play();
+game_object.destroy_metroid = function(){
 
+};
+
+game_object.bgvideo = document.getElementById('bg-video');
+
+game_object.video_start = function(){
+	game_object.bgvideo.play();	
+};
+game_object.video_pause = function(){};
+
+game_object.video_start();
