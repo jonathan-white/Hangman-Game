@@ -2,9 +2,7 @@
 /*--Global Styles--*/
 /*-----------------*/
 
-* {
-	box-sizing: border-box;
-}
+* {	box-sizing: border-box;}
 
 body {
 	background-color: #000;
@@ -14,9 +12,7 @@ body {
 	overflow-x: hidden;
 }
 
-p {
-	padding: 20px 20px 0;
-}
+p {	padding: 20px 20px 0;}
 
 /*------------*/
 /*--Clearfix--*/
@@ -47,13 +43,8 @@ header {
 	text-align: center;
 }
 
-h1{
-	font-size: 80px;
-}
-
-h3{
-	font-size: 30px;
-}
+h1{	font-size: 80px;}
+h3{	font-size: 30px;}
 
 /*----------------*/
 /*--Main Wrapper--*/
@@ -79,9 +70,7 @@ main {
 	border: 4px dotted #fff;
 }
 
-.spacer {
-	display: none;
-}
+.spacer {display: none;}
 
 /*----------------*/
 /*--Image Holder--*/
@@ -141,13 +130,9 @@ main {
 	margin: 10px 0;
 }
 
-#word-showing li:last-child {
-	margin-right: 0;
-}
+#word-showing li:last-child {margin-right: 0;}
 
-.output {
-	color: #777;
-}
+.output { color: #777; }
 
 /*----------*/
 /*--Footer--*/
@@ -176,6 +161,7 @@ footer a {
 	position: fixed;
 	top: 20px;
 	right: 10px;
+	animation: flyto_left 1s reverse;
 }
 
 .theme-options li {
@@ -190,6 +176,17 @@ footer a {
 	cursor: pointer;
 	border-radius: 50% 50% / 10px;
 	transition: all 1s 200ms;
+}
+
+@keyframes flyto_left{
+	20% {
+		top: 40px;
+		right: 40px;
+	}
+	100% {
+		top: -10%;
+		right: -10%;
+	}
 }
 
 #theme-1.active,
@@ -300,6 +297,26 @@ footer a {
 	position: fixed;
 	bottom: 10px;
 	left: 10px;
+	animation: flyto_right 2s forwards;
+}
+
+@keyframes flyto_right{
+	0% {
+		bottom: -10%;
+		left: -10%;
+	}
+	50% {
+		bottom: -10%;
+		left: -10%;
+	}
+	80% {
+		bottom: 20px;
+		left: 20px;
+	}
+	100% {
+		bottom: 10px;
+		left: 10px;
+	}
 }
 
 .difficulty-options li {
@@ -334,14 +351,9 @@ footer a {
 	color: #fff;
 }
 
-.video-background {
-	display: none;
-}
-
 /*-------------------*/
-/*-- Metroid Score --*/
+/*-- Metroid Stuff --*/
 /*-------------------*/
 
-.scoreholder {
-	display: none;
-}
+.video-background {	display: none;}
+.scoreholder {display: none;}
