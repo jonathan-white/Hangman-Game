@@ -27,4 +27,4 @@ The game offers three difficulty settings: Easy, Normal and Hard. Try your hand 
 ## Author
 
 This project is maintained and written by 
-(Jon White) https://motionswing.github.io/Responsive-Portfolio/index.html
+(Jon White) https://motionswing.github.io/
