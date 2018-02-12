@@ -1,6 +1,6 @@
 var game_object = {
 	"themes": ["cookies","movies","metroid"],
-	"image": document.getElementsByClassName('showcase')[0].getElementsByTagName('img')[0],
+	"image": document.getElementById("image"),
 	"title": "",
 	"subtitle": "",
 	"item_type": "",
@@ -61,6 +61,7 @@ var game_object = {
 		// if guess count is > 20% of the number of letters in the chosen word, close curtains (Movies)
 		var overflow_keys = Math.floor(game_object.current_item.name.length * .20);
 		if (game_object.letters_guessed >= overflow_keys) {
+			game_object.trailer_stop();
 			game_object.close_curtains();
 		}
 
@@ -125,6 +126,11 @@ var game_object = {
 			// Display the image
 			game_object.update_image("win");
 
+			if (game_object.title === "Movies") {
+				// Play Trailer (hide image)
+				game_object.trailer_start();	
+			}
+			
 			// Restart the game
 			game_object.game_start();
 		}
@@ -250,7 +256,9 @@ var game_object = {
 	},
 	hide_score: function(){
 		document.getElementsByClassName("scoreholder")[0].style.display = 'none';
-	}
+	},
+	trailer_start: function(){},
+	trailer_stop: function(){}
 };
 
 document.onkeyup = function(event){

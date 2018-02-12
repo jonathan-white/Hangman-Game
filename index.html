@@ -20,14 +20,15 @@
 		<h1 id="page-title">Cookies</h1>
 		<h2 id="page-subtitle">Can you guess the type of cookie?</h2>
 	</header>
-	<main class="clearfix">
+	<main>
 		<section class="img-holder">
 			<div>
 				<p id="status-title">Cookies</p>
 				<h3 id="status"></h3>
 			</div>
 			<div class="showcase">
-				<img src="assets/images/cookies.jpg" alt="cookies">
+				<img id="image" src="assets/images/cookies.jpg" alt="cookies">
+				<iframe id="preview" width="290" height="163" src="" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<div class="curtain curtain-left-1"></div>
 			<div class="curtain curtain-left-2"></div>
@@ -42,7 +43,7 @@
 			<p>Press any key to get started!</p>				
 			<p id="wins" class="output">Wins</p>			
 			<p id="word-title">Current Cookie</p>
-			<ul id="word-showing" class="clearfix">
+			<ul id="word-showing">
 				<li id="letter-0" class="output"></li>
 			</ul>	
 			<p>Number of guesses remaining</p>
@@ -58,7 +59,7 @@
 	</ul>
 	<ul class="difficulty-options">
 		<li id="option-1" data-level="Easy">Easy</li>
-		<li id="option-2" data-level="Regular" class="active">Normal</li>
+		<li id="option-2" data-level="Normal" class="active">Normal</li>
 		<li id="option-3" data-level="Hard">Hard</li>
 	</ul>
 	<div class="video-background">

@@ -64,3 +64,5 @@ game_object.video_pause = function(){
 
 game_object.video_pause();
 game_object.hide_score();
+
+game_object.trailer_stop();

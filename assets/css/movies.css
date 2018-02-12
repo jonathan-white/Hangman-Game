@@ -152,3 +152,18 @@ h2,
 
 	100% { background-image: radial-gradient(ellipse at 50% 50%, transparent 70%, #000 120%); }
 }
+
+#preview {
+	display: inline;
+	margin-top: 50px;
+}
+
+
+@media screen and (max-width: 768px){
+	body {
+		font-size: .625rem;
+	}
+	#preview {
+		margin: 0;
+	}
+}

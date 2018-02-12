@@ -78,3 +78,5 @@ game_object.increaseScore = function(amount){
 	player_score.style.display = 'inline-block';
 	player_score.textContent = "Score: " + game_object.score;
 };
+
+game_object.trailer_stop();
