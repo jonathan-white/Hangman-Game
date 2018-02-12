@@ -36,13 +36,43 @@ game_object.items = [
 	},
 	{ 
 		"name": "ready player one", 
-		"image": "rpo.jpg", "trailer": 
-		"https://www.youtube.com/embed/cSp1dM2Vj48?autoplay=1&loop=1&playlist=cSp1dM2Vj48" 
+		"image": "rpo.jpg", 
+		"trailer": "https://www.youtube.com/embed/cSp1dM2Vj48?autoplay=1&loop=1&playlist=cSp1dM2Vj48" 
 	},
 	{ 
 		"name": "rampage", 
-		"image": "rampage.jpg", "trailer": 
-		"https://www.youtube.com/embed/coOKvrsmQiI?autoplay=1&loop=1&playlist=coOKvrsmQiI" 
+		"image": "rampage.jpg", 
+		"trailer": "https://www.youtube.com/embed/coOKvrsmQiI?autoplay=1&loop=1&playlist=coOKvrsmQiI" 
+	},
+	{ 
+		"name": "jurassic world: fallen kingdom", 
+		"image": "jurassic_world.jpg", 
+		"trailer": "https://www.youtube.com/embed/NooW_RbfdWI?autoplay=1&loop=1&playlist=NooW_RbfdWI" 
+	},
+	{ 
+		"name": "deadpool 2", 
+		"image": "deadpool2.jpg", 
+		"trailer": "https://www.youtube.com/embed/xZNBFcwd7zc?autoplay=1&loop=1&playlist=xZNBFcwd7zc" 
+	},
+	{ 
+		"name": "ant-man and the wasp", 
+		"image": "ant-man_wasp.jpg", 
+		"trailer": "https://www.youtube.com/embed/8_rTIAOohas?autoplay=1&loop=1&playlist=8_rTIAOohas" 
+	},
+	{ 
+		"name": "a wrinkle in time", 
+		"image": "wrinkle.jpg", 
+		"trailer": "https://www.youtube.com/embed/UhZ56rcWwRQ?autoplay=1&loop=1&playlist=UhZ56rcWwRQ" 
+	},
+	{ 
+		"name": "red sparrow", 
+		"image": "red_sparrow.jpg", 
+		"trailer": "https://www.youtube.com/embed/PmUL6wMpMWw?autoplay=1&loop=1&playlist=PmUL6wMpMWw" 
+	},
+	{ 
+		"name": "mission: impossible - fallout", 
+		"image": "mi_fallout.jpg", 
+		"trailer": "https://www.youtube.com/embed/wb49-oV0F78?autoplay=1&start=6&loop=1&playlist=wb49-oV0F78" 
 	}
 ];
 
