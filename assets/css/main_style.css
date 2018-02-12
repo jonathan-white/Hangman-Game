@@ -1,6 +1,7 @@
 /*-----------------*/
 /*--Global Styles--*/
 /*-----------------*/
+@import url('https://fonts.googleapis.com/css?family=Passion+One|Roboto');
 
 * {	box-sizing: border-box;}
 
@@ -66,7 +67,6 @@ main {
 	flex: 0 1 auto;
 	position: relative;
 	width: 50%;
-/*	height: 70vh;*/
 	border: 4px dotted #fff;
 }
 
@@ -159,13 +159,16 @@ footer a {
 
 .theme-options {
 	position: fixed;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-end;
 	top: 20px;
 	right: 10px;
 	animation: flyto_left 1s reverse;
 }
 
 .theme-options li {
-	float: left;
+	/*float: left;*/
 	padding: 10px;
 	background-color: #ccc;
 	word-spacing: initial;
@@ -295,6 +298,9 @@ footer a {
 
 .difficulty-options {
 	position: fixed;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
 	bottom: 10px;
 	left: 10px;
 	animation: flyto_right 2s forwards;
@@ -320,7 +326,6 @@ footer a {
 }
 
 .difficulty-options li {
-	float: left;
 	padding: 10px;
 	background-color: #ccc;
 	word-spacing: initial;
@@ -360,7 +365,7 @@ footer a {
 
 #preview {display: none;}
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767.98px){
 	main {
 		flex-flow: column nowrap;
 	}
@@ -369,15 +374,27 @@ footer a {
 		order: -1;
 	}
 
-	.img-holder, .content-holder {
+	.img-holder,
+	.content-holder {
 		width: 100%;
 		/*height: 50vh;*/
 	}
-}
 
-@media screen and (max-width: 768px){
+	#status {
+		font-size: 1.25rem;
+	}
+
 	.showcase {
 		height: 165px;
+	}
+
+	.theme-options {
+		flex-flow: column nowrap;
+	}
+
+	.theme-options li {
+		margin-bottom: 10px;
+		margin-right: 0;
 	}
 }
 
