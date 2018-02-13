@@ -82,7 +82,9 @@ var game_object = {
 				if (!game_object.correct_letters.includes(i) && game_object.current_item.name[i] == typed_key) {
 					game_object.correct_letters.push(i); 
 					game_object.correct_guesses++;
-					document.getElementById('letter-' + i).textContent = typed_key;
+					var letter_pos = document.getElementById('letter-' + i);
+					letter_pos.textContent = typed_key;
+					letter_pos.classList.add("flash");
 				}
 			}
 

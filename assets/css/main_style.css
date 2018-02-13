@@ -132,7 +132,23 @@ main {
 
 #word-showing li:last-child {margin-right: 0;}
 
-.output { color: #777; }
+.output { 
+	color: #777; 
+	font-family: 'Passion One', cursive;
+}
+
+.output.flash {
+	animation: flash 300ms linear;
+}
+
+@keyframes flash {
+	0% {
+		color: #fff;
+	}
+	100% {
+		color: #777;
+	}
+}
 
 /*----------*/
 /*--Footer--*/
