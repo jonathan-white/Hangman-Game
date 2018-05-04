@@ -265,6 +265,12 @@ body {
 	}
 }
 
+
+#preview {
+	display: inline;
+	margin-top: 50px;
+}
+
 @media screen and (max-width: 768px){
 	.scoreholder {
 		top: initial;
