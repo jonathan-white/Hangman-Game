@@ -8,7 +8,7 @@ This simple game challenges a user to guess a word or phrase based on the select
 ## Getting Started
 
 To start the game click the link below and start typing!
-https://motionswing.github.io/Hangman-Game/
+https://jonathan-white.github.io/Hangman-Game/
 
 ## Themes
 
@@ -27,4 +27,4 @@ The game offers three difficulty settings: Easy, Normal and Hard. Try your hand 
 ## Author
 
 This project is maintained and written by 
-(Jon White) https://motionswing.github.io/
+(Jon White) https://jonathan-white.github.io/
