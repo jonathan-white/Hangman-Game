@@ -23,6 +23,12 @@ body {
 	z-index: -1;
 }
 
+.img-holder img.kraid {
+	top: 10%;
+    left: 32%;
+    transform: scaleX(-1);
+}
+
 .output {
 	color: #777;
 }
