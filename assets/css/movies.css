@@ -38,7 +38,7 @@ h2,
 .curtain {
 	position: absolute;
 	top: -11px;
-	height: 102%;
+	height: 100%;
 	width: 17%;
 	background-color: #f00;
 	background: repeating-linear-gradient(to right, #f00 20%, #000 25%);
