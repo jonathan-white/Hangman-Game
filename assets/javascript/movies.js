@@ -2,77 +2,77 @@ game_object.items = [
 	{ 
 		"name": "black panther", 
 		"image": "black_panther.jpg", 
-		"trailer": "https://www.youtube.com/embed/xjDjIWPwcPU?autoplay=1&loop=1&playlist=xjDjIWPwcPU" 
+		"trailer": "https://www.youtube.com/embed/xjDjIWPwcPU?&autoplay=1&loop=1" 
 	},
 	{ 
 		"name": "venom", 
 		"image": "venom.jpg", 
-		"trailer": "https://www.youtube.com/embed/dzxFdtWmjto?autoplay=1&start=7&loop=1&playlist=dzxFdtWmjto" 
+		"trailer": "https://www.youtube.com/embed/dzxFdtWmjto?&autoplay=1&start=7&loop=1" 
 	},
 	{ 
 		"name": "solo", 
 		"image": "solo.jpg", 
-		"trailer": "https://www.youtube.com/embed/dNW0B0HsvVs?autoplay=1&loop=1&playlist=dNW0B0HsvVs" 
+		"trailer": "https://www.youtube.com/embed/dNW0B0HsvVs?&autoplay=1&loop=1" 
 	},
 	{ 
 		"name": "annihilation", 
 		"image": "annihilation.jpg", 
-		"trailer": "https://www.youtube.com/embed/89OP78l9oF0?autoplay=1&loop=1&playlist=89OP78l9oF0" 
+		"trailer": "https://www.youtube.com/embed/89OP78l9oF0?&autoplay=1&loop=1" 
 	},
 	{ 
 		"name": "tomb raider", 
 		"image": "tomb_raider.jpg", 
-		"trailer": "https://www.youtube.com/embed/3KkhD0MnaJU?autoplay=1&loop=1&playlist=3KkhD0MnaJU" 
+		"trailer": "https://www.youtube.com/embed/3KkhD0MnaJU?&autoplay=1&loop=1" 
 	},
 	{ 
 		"name": "avengers: infinity war", 
 		"image": "infinity_war.jpg", 
-		"trailer": "https://www.youtube.com/embed/6ZfuNTqbHE8?autoplay=1&loop=1&playlist=6ZfuNTqbHE8" 
+		"trailer": "https://www.youtube.com/embed/6ZfuNTqbHE8?&autoplay=1&loop=1" 
 	},
 	{ 
 		"name": "pacific rim uprising", 
 		"image": "pacific_rim_uprising.jpg", 
-		"trailer": "https://www.youtube.com/embed/fUjicxMPDzs?autoplay=1&start=6&loop=1&playlist=fUjicxMPDzs" 
+		"trailer": "https://www.youtube.com/embed/fUjicxMPDzs?&autoplay=1&start=6&loop=1" 
 	},
 	{ 
 		"name": "ready player one", 
 		"image": "rpo.jpg", 
-		"trailer": "https://www.youtube.com/embed/cSp1dM2Vj48?autoplay=1&loop=1&playlist=cSp1dM2Vj48" 
+		"trailer": "https://www.youtube.com/embed/cSp1dM2Vj48?&autoplay=1&loop=1" 
 	},
 	{ 
 		"name": "rampage", 
 		"image": "rampage.jpg", 
-		"trailer": "https://www.youtube.com/embed/coOKvrsmQiI?autoplay=1&loop=1&playlist=coOKvrsmQiI" 
+		"trailer": "https://www.youtube.com/embed/coOKvrsmQiI?&autoplay=1&loop=1" 
 	},
 	{ 
 		"name": "jurassic world: fallen kingdom", 
 		"image": "jurassic_world.jpg", 
-		"trailer": "https://www.youtube.com/embed/NooW_RbfdWI?autoplay=1&loop=1&playlist=NooW_RbfdWI" 
+		"trailer": "https://www.youtube.com/embed/NooW_RbfdWI?&autoplay=1&loop=1" 
 	},
 	{ 
 		"name": "deadpool 2", 
 		"image": "deadpool2.jpg", 
-		"trailer": "https://www.youtube.com/embed/xZNBFcwd7zc?autoplay=1&loop=1&playlist=xZNBFcwd7zc" 
+		"trailer": "https://www.youtube.com/embed/xZNBFcwd7zc?&autoplay=1&loop=1" 
 	},
 	{ 
 		"name": "ant-man and the wasp", 
 		"image": "ant-man_wasp.jpg", 
-		"trailer": "https://www.youtube.com/embed/8_rTIAOohas?autoplay=1&loop=1&playlist=8_rTIAOohas" 
+		"trailer": "https://www.youtube.com/embed/8_rTIAOohas?&autoplay=1&loop=1" 
 	},
 	{ 
 		"name": "a wrinkle in time", 
 		"image": "wrinkle.jpg", 
-		"trailer": "https://www.youtube.com/embed/UhZ56rcWwRQ?autoplay=1&loop=1&playlist=UhZ56rcWwRQ" 
+		"trailer": "https://www.youtube.com/embed/UhZ56rcWwRQ?&autoplay=1&loop=1" 
 	},
 	{ 
 		"name": "red sparrow", 
 		"image": "red_sparrow.jpg", 
-		"trailer": "https://www.youtube.com/embed/PmUL6wMpMWw?autoplay=1&loop=1&playlist=PmUL6wMpMWw" 
+		"trailer": "https://www.youtube.com/embed/PmUL6wMpMWw?&autoplay=1&loop=1" 
 	},
 	{ 
 		"name": "mission: impossible - fallout", 
 		"image": "mi_fallout.jpg", 
-		"trailer": "https://www.youtube.com/embed/wb49-oV0F78?autoplay=1&start=6&loop=1&playlist=wb49-oV0F78" 
+		"trailer": "https://www.youtube.com/embed/wb49-oV0F78?&autoplay=1&start=6&loop=1" 
 	}
 ];
 

@@ -172,3 +172,10 @@ h2,
 		font-size: 1.25rem;
 	}
 }
+
+@media only screen and (min-width: 1200px) {
+    #preview {
+        width: 56%;
+        height: 50%;
+    }
+}
